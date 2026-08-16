@@ -1,0 +1,19 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+export default function ThemeToggle(){
+    const [theme, setTheme] = useState("light");
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+    }, [theme]);
+
+    return (
+       <button
+        className="btn btn-ghost"
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        {theme === "light" ? "🌙" : "☀️"}
+    </button>
+    );
+}
