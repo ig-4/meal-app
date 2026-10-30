@@ -8,9 +8,10 @@ export default async function MealPage({ params }) {
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{meal.strMeal}</h1>
       <img src={meal.strMealThumb} alt={meal.strMeal} className="max-w-md h-auto rounded-lg shadow-lg" />
-      <div className="mt-4">
-        <h2 className="text-xl font-semibold">Instructions</h2>
-        <p className="text-gray-600">{meal.strInstructions}</p>
+
+    <div className="mt-4">
+      <h2 className="text-xl font-semibold">Instructions</h2>
+      <p className="text-gray-600">{meal.strInstructions}</p>
       </div>
     </div>
   );
